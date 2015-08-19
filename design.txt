@@ -1,0 +1,43 @@
+requirements:
+
+- have hex grid as map (in progress)
+- scroll map
+- zoom map
+- most tiles should be allowed one army, one worker.
+- some tiles (or most) should allow improvements (fort, wall, city)
+- interface to click on army and have it move
+- multiple players
+- interface to build cities, workers etc
+- game mechanics to build workers, soldiers
+- battle mechanics 
+
+CLASS DESIGN:
+
+IN GAME
+
+GameMap: stores all tiles. This will be the central class
+Tile: a hex tile in the game, will store players, structures, cities, etc
+Party: abstract class for soldiers and soldiers
+Structure: abstract base class for cities, forts, walls, mining camps, etc
+City: sits on tile, requires food, produces workers, soldiers
+Wall: sits on tile, prevents movement
+Fort: sits on tile, provides defense
+Camp: abstract class for camps, camps sit on resources(hills for stone, forest for wood, etc) and produce resources
+
+A tile can hold at most: one soldier, one worker, one resource, one structure
+
+OUT OF GAME:
+UI: deals with buttons, etc (we should use a library for this, too much work and not fun)
+EventManager: handles keyboard and mouse events
+GameRunner: runs and handles the game
+MyScreen: stores screen variables (zoom, offset), has functions to convert coordinates
+
+
+POTENTIAL PROBLEMS:
+too many images on screen could lower framerate
+
+TODO:
+- build test files 
+- create makefile test
+- install pylinter
+- create installation file

@@ -40,9 +40,9 @@ def run():
                 pass
         press = pygame.key.get_pressed()
         if press[pygame.K_LEFT]:
-            gvars.offset_x -= 3
+            gvars.offset_x -= 8
         if press[pygame.K_RIGHT]:
-            gvars.offset_x += 3
+            gvars.offset_x += 8
         if press[pygame.K_UP]:
             gvars.offset_y -= 3
         if press[pygame.K_DOWN]:

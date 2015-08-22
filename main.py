@@ -50,7 +50,7 @@ def run():
 
 
         #print(x)
-        background = pygame.transform.scale(background, (200,200))
+        #background = pygame.transform.scale(background, (200,200))
         gvars.screen.blit(background, (0,0))
         gm.render()
         pygame.display.update()
